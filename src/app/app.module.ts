@@ -3,14 +3,21 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { LoggerModule } from "./logger/logger.module";
+import { ListComponent } from './list.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    LoggerModule.init({
+        flag: true
+        }
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]
